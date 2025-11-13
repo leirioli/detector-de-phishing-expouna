@@ -1,4 +1,3 @@
-import Levenshtein as lev
 from Levenshtein import distance
 
 
@@ -24,15 +23,21 @@ def check_phishing_risk(site_testado):
             distancia_minima = distancia_atual
             site_minimo = site
 
-    if distancia_minima <= 2:
+    if distancia_minima == 0:
+        return {
+            "status": "OK",
+            "score": "100.00%",
+            "reason": "Correspondencia exata encontrada na lista de dominios seguros"
+        }
+    elif distancia_minima <= 2:
         return {
             "status": "ALERTA",
             "score": "90.00%",
-            "reason": f"ALTA SIMILARIDADE ({distancia_minima} com {site_minimo}. Não clique!"
+            "reason": f"ALTA SIMILARIDADE ({distancia_minima} com {site_minimo}. Nao clique!"
         }
     else:
         return {
             "status": "OK",
-            "score": "100.00%",
-            "reason": "Site confiável."
-        }
+            "score": "10.00%",
+            "reason": "Site confiavel."
+        } 
