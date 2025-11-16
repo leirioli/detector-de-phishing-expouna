@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerta</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="alerta-overlay" class="overlay">
+      <div class="caixinha-alerta">
+        <div class="perigo-icon">⚠️</div>
+        <h1 id="titulo-alerta">Site suspeito detectado!</h1>
+        <p id="mensagem-alerta">
+          Cuidado! O sistema detectou que este site pode ser uma tentativa de
+          Phishing. Seus dados podem estar em risco!
+        </p>
+        <div class="btn-container">
+          <button id="btn-voltar" class="btn btn-seguro">Sair</button>
+          <button id="btn-ignorar" class="btn btn-risco">
+            Ignorar e continuar (Não recomendado!)
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

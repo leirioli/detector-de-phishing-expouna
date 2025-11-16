@@ -1,0 +1,137 @@
+/* estilo da página de alerta */
+
+/* estilo  de fundo */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* estilo da caixa */
+.caixinha-alerta {
+  background-color: rgb(54, 69, 79);
+  padding: 50px;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+}
+
+/* estilo do icone */
+.perigo-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* estilo dos textos */
+#mensagem-alerta {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* estilo dos botões  */
+.btn {
+  cursor: pointer;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.2s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn-seguro {
+  margin: auto;
+  width: 180px;
+  background-color: #8a9a5b;
+}
+
+.btn-seguro:hover {
+  background-color: rgb(138, 154, 91, 0.7);
+}
+
+.btn-risco {
+  max-width: 200px;
+  margin: auto;
+  background-color: #954535;
+  color: white;
+}
+
+.btn-risco:hover {
+  background-color: rgb(149, 69, 53, 0.7);
+}
+
+/* estilos do popup */
+.corpo-popup {
+  width: 320px;
+  height: auto;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+
+.popup-container {
+  padding: 15px;
+}
+
+.status-card {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.icone-status {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.status-card h2 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.status-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.icone-seguro {
+  color: #2ecc71;
+}
+
+#status-seguro h2 {
+  color: #27ae60;
+}
+
+.icone-perigo {
+  color: #ff4444; /* Vermelho */
+}
+
+#status-perigoso h2 {
+  color: #c0392b;
+}
+
+/*
+  Esta classe esconde o elemento. 
+  A Pessoa 4 vai "remover" essa classe do status-perigoso e "adicionar" no status-seguro quando o site for ruim.
+*/
+.hidden {
+  display: none;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detector de Phishing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="corpo-popup">
+    <div class="popup-container">
+      <div id="status-seguro" class="status-card">
+        <div class="icone-status icone-seguro">✅</div>
+        <h2 id="popup-titulo">Site Seguro</h2>
+        <p id="popup-mensagem">Este site parece ser legítimo e confiável.</p>
+      </div>
+      <div id="status-perigoso" class="status-card hidden">
+        <div class="icone-status icone-perigo">❌</div>
+        <h2 id="popup-titulo-perigo">Risco Detectado!</h2>
+        <p id="popup-mensagem-perigo">
+          O site que você está visitando é suspeito de Phishing.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
