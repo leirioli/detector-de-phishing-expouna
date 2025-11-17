@@ -12,7 +12,11 @@ def check_phishing_risk(site_testado):
         'facebook.com'
     ]
 
-    site_testado = site_testado.lower() .replace ('http://', '') .replace ('https://', '') .replace ('www.', '')
+    site_testado = site_testado.lower() .replace ('https://', '') .replace ('http://', '') .replace ('www.', '')
+
+    if site_testado.endswith('/'):
+        site_testado = site_testado[:-1]
+
     distancia_minima = float ('inf')
     site_minimo = ''
 
@@ -33,7 +37,7 @@ def check_phishing_risk(site_testado):
         return {
             "status": "ALERTA",
             "score": "90.00%",
-            "reason": f"ALTA SIMILARIDADE ({distancia_minima} com {site_minimo}. Nao clique!"
+            "reason": f"ALTA SIMILARIDADE {distancia_minima} com {site_minimo}. Nao clique!"
         }
     else:
         return {
