@@ -1,0 +1,34 @@
+{ 
+  "manifest_version": 3, 
+  "name": "Detector de Phishing",
+  "version": "1.0",
+  "description": "Extensão para detectar sites de phishing usando inteligência artificial",
+  
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  
+  "host_permissions": [
+    "http://localhost:5000/*"
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Verificar segurança do site"
+  }
+}

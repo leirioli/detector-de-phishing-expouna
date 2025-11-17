@@ -135,3 +135,31 @@
 .hidden {
   display: none;
 }
+
+/* Estilos adicionais para a extensão na parte do JavaScript */
+.score-info {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+#score-info, #score-info-seguro {
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Animações para o alerta */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.overlay {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Responsividade para o popup */
+.corpo-popup {
+  min-height: 150px;
+}
