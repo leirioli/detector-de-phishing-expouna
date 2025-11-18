@@ -31,17 +31,17 @@ def check_phishing_risk(site_testado):
         return {
             "status": "OK",
             "score": "100.00%",
-            "reason": "Correspondencia exata encontrada na lista de dominios seguros"
+            "reason": "Correspondencia exata encontrada na lista de dominios seguros",
         }
     elif distancia_minima <= 2:
         return {
             "status": "ALERTA",
             "score": "90.00%",
-            "reason": f"ALTA SIMILARIDADE {distancia_minima} com {site_minimo}. Nao clique!"
+            "reason": f"ALTA SIMILARIDADE {distancia_minima} com {site_minimo}. Nao clique!",
         }
     else:
         return {
             "status": "OK",
             "score": "10.00%",
-            "reason": "Site confiavel."
+            "reason": "Site confiavel.",
         } 
